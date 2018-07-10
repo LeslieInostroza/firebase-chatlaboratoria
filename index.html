@@ -23,8 +23,20 @@
     </div>
   </div>
 
-  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-  <script>
+<div>
+  <div id="messageContainer">
+
+  </div>
+
+  <input id="messageArea"type="text">
+  <input type="button" id="sendButton" value="SEND" onclick="sendMessage()">
+
+</div>
+
+  
+  
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script>
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyDIEJb2V_YLe7v5bv-LW5F9uW62bQwDYIM",
@@ -35,7 +47,7 @@
     messagingSenderId: "656130956256"
   };
   firebase.initializeApp(config);
-  </script>
+</script>
   <script src="app.js"></script>
 </body>
 </html>
