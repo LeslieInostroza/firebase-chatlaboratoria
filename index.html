@@ -8,7 +8,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <script src="app.js"></script>
+  <h1>Chat Laboratoria</h1>
+  <div id ="loginContainer">
+    <div id="loggedIn">
+      <p id="username"></p> <input id ="logOutButton" type = "button" value ="LOG OUT"></input>
+    </div>
+    <div id="loggedOut">
+      <input id ="email" type="email">
+      <input id="password" type="password">
+      <input id ="register" onclick="register()"type ="button" value="REGISTER"></input>
+      <input id="login" onclick="login()" type="button" value="LOGIN">
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDIEJb2V_YLe7v5bv-LW5F9uW62bQwDYIM",
+    authDomain: "chatlaboratoria-7f448.firebaseapp.com",
+    databaseURL: "https://chatlaboratoria-7f448.firebaseio.com",
+    projectId: "chatlaboratoria-7f448",
+    storageBucket: "chatlaboratoria-7f448.appspot.com",
+    messagingSenderId: "656130956256"
+  };
+  firebase.initializeApp(config);
+  </script>
+  <script src="app.js"></script>
 </body>
 </html>
