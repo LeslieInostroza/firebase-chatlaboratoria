@@ -2,11 +2,13 @@ window.onload = () =>{
   firebase.auth().onAuthStateChanged((user)=>{
     if(user){
       //siestamos logueados
+      chat.style.display = 'block';
       loggedOut.style.display = 'none';
       loggedIn.style.display = 'block';
       console.log('User >'+JSON.stringify(user));
     }else{
       //no estamos logeados
+      chat.style.display = 'none';
       loggedOut.style.display = 'block';
       loggedIn.style.display = 'none';
     }
@@ -27,8 +29,7 @@ window.onload = () =>{
   .limitToLast(1)
   .on('child_added', (newMessage)=> {
     messageContainer.innerHTML += `
-    <p>Nombre: ${newMessage.val().creatorName}</p>
-    <p>${newMessage.val().text}</p>`;
+    <p> <span>*${newMessage.val().creatorName}:  ${newMessage.val().text} </span></p>`;
   });
 };
 

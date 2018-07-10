@@ -12,25 +12,25 @@
   <div id ="loginContainer">
     <div id="loggedIn">
       <p id="username"></p> 
-      <input id ="logOutButton" onclick="logout()" type = "button" value ="LOG OUT"></input>
+      <input id ="logOutButton" onclick="logout()" type = "button" value ="Cerrar Sesion"></input>
     </div>
     <div id="loggedOut">
-      <input id ="email" type="email">
-      <input id="password" type="password">
+      <input id ="email" type="email"placeholder="Correo Electronico">
+      <input id="password" type="password" placeholder="Contraseña">
       <input id ="register" onclick="register()"type ="button" value="REGISTER"></input>
       <input id="login" onclick="login()" type="button" value="LOGIN">
       <input id="loginFacebook" type="button" onclick="loginFacebook()" value="LOGIN FACEBOOK">
     </div>
   </div>
 
-<div>
-  <div id="messageContainer">
-
-  </div>
-
-  <input id="messageArea"type="text">
-  <input type="button" id="sendButton" value="SEND" onclick="sendMessage()">
-
+<div id="chat">
+  <div id ="fondomensajes">
+  <div id="messageContainer"></div>
+</div>
+<div id="mensajes">
+  <input id="messageArea"type="text" placeholder="Mensaje" maxlength = "50" size="100">
+  <input type="button" id="sendButton" value="Enviar" onclick="sendMessage()">
+</div>
 </div>
 
   
