@@ -29,7 +29,7 @@ window.onload = () =>{
   .limitToLast(1)
   .on('child_added', (newMessage)=> {
     messageContainer.innerHTML += `
-    <p> <span>*${newMessage.val().creatorName}:  ${newMessage.val().text} </span></p>`;
+    <p> *${newMessage.val().creatorName}:  ${newMessage.val().text} </p>`;
   });
 };
 
@@ -97,7 +97,7 @@ function sendMessage(){
 
   firebase.database().ref(`messages/${newMessageKey}`).set({
     creator : currentUser.uid,
-    creatorName : currentUser.displayName,
+    creatorName : currentUser.email || currentUser.displayName,
     text : messageAreaText
   });
 }
